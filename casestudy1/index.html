@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login page</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+         
+        <div class="wrapper">
+      <div class="title">Login </div>
+
+<form  onsubmit="return validate(callback)">
+    <div id="error"></div>
+        <div class="field">
+          <input type="text" id="user">
+          <label>Username</label>
+        </div>
+<div class="field">
+          <input type="password" id="pass">
+          <label>Password</label>
+        </div>
+<div class="content">
+          <div class="checkbox">
+            <input type="checkbox" id="remember-me">
+            <label for="remember-me">Remember me</label>
+          </div>
+<div class="pass-link">
+<a href="#">Forgot password?</a></div>
+</div>
+<div class="field">
+          <input type="submit" value="Login">
+        </div>
+<div class="signup-link">
+Not a member? <a href="#">Signup now</a></div>
+</form>
+</div>
+        <script>
+            function validate(callback)
+            {
+                const user = document.getElementById('user').value;
+                const pass = document.getElementById('pass').value;
+                const error = document.getElementById('error');
+                let text;
+                if(user === "admin" && pass === "12345"){
+                    callback();
+                }
+                else{
+                    text="**Invalid username or password**";
+                    error.innerHTML=text;
+                    error.style.color=" #4158d0";
+                    
+                    error.style.margin="20px";
+                    return false;
+            }
+          
+            }
+            function callback(){
+                window.close("index.html");
+                window.open("welcome.html");
+                
+            }
+        </script>
+    </body>
+</html>  

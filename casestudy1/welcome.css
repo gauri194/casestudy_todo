@@ -1,0 +1,171 @@
+*
+{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Poppins', sans-serif;
+  
+    
+}
+body
+{
+  
+    background-image: url('/img/samuel-ferrara-IEHPDNk2-8w-unsplash\ \(1\).jpg');
+    /* background: linear-gradient(-135deg, #c850c0, #4158d0); */
+    background-repeat: no-repeat;
+    background-size: 1600px 800px;
+    background-attachment: fixed;
+}
+
+.content h1
+{
+    margin: 100px;
+    color:white;
+    text-align: center;
+    font-size: 200px;
+    position: absolute;
+    padding-left: 7%;
+    z-index: 999;
+    letter-spacing: 4px;
+    padding-top: 60px;
+    
+    /* padding-top: 1%; */
+}
+#p1{
+    margin: 100px;
+    color:white;
+    text-align: center;
+    font-size: 30px;
+    position: absolute;
+    padding-left: 43%;
+    padding-top: 20%;
+    letter-spacing: 4px;
+}
+#p2{
+    margin: 100px;
+    color:white;
+    text-align: center;
+    font-size: 30px;
+    position: absolute;
+    padding-left: 60%;
+    padding-top: 20%;
+    letter-spacing: 4px;
+}
+
+a
+{
+    color: white;
+    text-decoration: none;
+    padding: 60px;
+    border-color: white;
+    /* transition: all .2s ease-out; */
+}
+
+
+#nav
+{
+    margin: 0%;
+    background-color: transparent;
+
+}
+/* #nav-logo h1
+{
+   
+    width: 10px;
+    padding-left: 46%;
+    font-size: 40px;
+    
+
+} */
+
+#nav-menu
+{
+    padding-top: 2%;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing:2px ;
+    padding-right: 0px;
+}
+#nav-menu a:hover
+{
+    /* text-decoration:underline; */
+    color:white ;
+    padding-bottom: 4px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    
+    
+    
+    /* border-radius: 15px; */
+    
+    
+}
+
+
+/* TODO CSS */
+
+h2{
+    color:white;
+    text-align: center;
+    margin-top:8%;
+    /* margin-bottom:1%; */
+    margin-left: 10%;
+    width: 80%;
+    height: 40px;
+    background-color: #a388e6;
+    /* border-radius: 30px; */
+    padding-top: 10px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    
+    }
+
+table
+    {
+        margin: 0 auto;
+        width: 80%;
+        margin-bottom: 10%;
+        padding-bottom: 5%;
+        /* border: 1px solid black; */
+        padding: 0px;
+        /* border-radius: 40px;  */
+        border-collapse: collapse;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        overflow: hidden;
+
+    }
+
+td
+{
+    /* border-radius: 50px; */
+    border: 1px solid  #a388e6;
+    
+    padding: 0.5rem;
+    text-align: center;
+    background-color: white;
+    
+   
+   
+}
+td:hover
+{
+    background-color: #c6b4f5;
+
+}
+
+th
+{
+    /* border-radius: 50px; */
+    border: 1px solid  #a388e6;
+    padding: 0.5rem;
+    text-align: center;
+    background: #c6b4f5;
+    color: white;
+   
+}
+
+
+
+  
+  
+  

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>To do page</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="welcome.css">
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+
+    </head>
+    <body>
+        <nav id="nav">
+            
+           
+            <div id="nav-menu">
+                <a href="welcome.html">Home</a>
+                <a href="#">About</a>
+           
+                <a href="todo.html">To Do</a>
+                <a href="index.html">Logout</a>
+            </div>
+        </nav>
+    
+
+        <h2>Get you work done!</h2> 
+        
+    <div id="showData"></div>
+    <section> 
+  
+        <!-- TABLE CONSTRUCTION-->
+        <table id='table'> 
+         
+           
+            <tr> 
+                <th>USER ID</th> 
+                <th>ID</th> 
+                <th>TITLE</th> 
+                <th>COMPLETED </th> 
+            </tr> 
+          
+    <script>
+     $(document).ready(function () { 
+        
+                    $.getJSON("https://jsonplaceholder.typicode.com/todos",  
+                            function (data) { 
+                        var user = ''; 
+  
+                        $.each(data, function (key, value) { 
+  
+                            user += '<tr>'; 
+                                user += '<td>' +  
+                                value.userId + '</td>'; 
+  
+                                user += '<td>' +  
+                                value.id + '</td>'; 
+  
+                                user += '<td>' +  
+                                value.title + '</td>'; 
+  
+                                var temp=value.completed;
+                                if(temp==true)
+                                {
+                                    user+='<td><input checked type="checkbox" id="completed" name="completed"  disabled></td>';
+                                }
+                                else
+                                {
+                                    user+='<td><input type="checkbox" id="completed1" name="completed" onclick="checkboxes()"></td>';
+                                }
+
+                                  user += '</tr>';
+
+                                         
+                               
+                        }); 
+               
+                        $('#table').append(user); 
+                      
+                    }); 
+                   
+                }); 
+
+                var ele=document.getElementsByTagName("input");
+                function checkboxes()
+                {
+                    
+                    var promise = new Promise(function(resolve,reject){
+                    var count=0;
+                    
+                        for(var i=0;i<=ele.length;i++)
+                        {
+                            if(ele[i].checked)
+                            {
+                                
+                                count++;
+                                
+                            }
+                            if(ele[i].disabled)
+                            {
+                                
+                                count--;
+
+                            }
+                            if(count==5)
+                            {  
+                                disable();
+                                break;
+                            }
+                           
+                        }
+                        function disable()
+                        {
+                            var c=document.getElementById('completed1');
+                            for(var i=0;i<c.length;i++)
+                            {
+                                if(!c[i].checked)
+                                {
+                                    c[i].disabled=true;
+                                }
+                            }
+                        }
+                        if(count==5)
+                        {
+                            resolve("Congrats!! 5 tasks successfully completed.");
+                            
+                          
+                        }
+                        else{
+                            reject("Error");
+                        }
+                    });
+                    promise
+                    .then(function(s){
+                        alert(s);
+                    })
+                    .catch(function(s){
+                        console.log(e);
+                    })
+                    }
+                
+
+                
+    </script>
+    </section>
+</body>
+
+</html>
